@@ -79,6 +79,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libskia_legacy
 
+# Building with wpa_supplicant binary
+PRODUCT_PACKAGES += \
+    wpa_supplicant
+
 # These are the hardware-specific settings that are stored in system properties.
 # Note that the only such settings should be the ones that are too low-level to
 # be reachable from resources or other mechanisms.
