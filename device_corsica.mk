@@ -28,7 +28,6 @@ PRODUCT_COPY_FILES += \
 	device/samsung/corsica/bcm_headset.kl:system/usr/keylayout/bcm_headset.kl \
 	device/samsung/corsica/bcm_keypad_v2.kl:system/usr/keylayout/bcm_keypad_v2.kl \
 	device/samsung/corsica/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-	device/samsung/corsica/Generic.kl:system/usr/keylayout/Generic.kl \
 	device/samsung/corsica/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl 
 
 # Filesystem management tools
