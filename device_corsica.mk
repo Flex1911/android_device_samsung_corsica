@@ -41,7 +41,11 @@ PRODUCT_PACKAGES += \
 # Misc other modules
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
-	audio.usb.default 
+	audio.usb.default \
+	audio.r_submix.default \
+
+USE_CUSTOM_AUDIO_POLICY := 1
+
 # Device-specific packages
 PRODUCT_PACKAGES += \
 	SamsungServiceMode 
@@ -80,7 +84,9 @@ PRODUCT_PACKAGES += \
 
 # Building with wpa_supplicant binary
 PRODUCT_PACKAGES += \
-    wpa_supplicant
+    wpa_supplicant \
+    hostapd \
+
 
 # These are the hardware-specific settings that are stored in system properties.
 # Note that the only such settings should be the ones that are too low-level to
