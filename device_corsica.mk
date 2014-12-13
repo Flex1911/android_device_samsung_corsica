@@ -44,8 +44,6 @@ PRODUCT_PACKAGES += \
 	audio.usb.default \
 	audio.r_submix.default \
 
-USE_CUSTOM_AUDIO_POLICY := 1
-
 # Device-specific packages
 PRODUCT_PACKAGES += \
 	SamsungServiceMode 

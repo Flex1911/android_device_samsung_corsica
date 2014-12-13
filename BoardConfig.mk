@@ -15,7 +15,7 @@ TARGET_ARCH_LOWMEM := true
 
 TARGET_BOOTLOADER_BOARD_NAME := rhea
 
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive androidboot.console=ttyS0
+BOARD_KERNEL_CMDLINE := androidboot.console=ttyS0
 BOARD_KERNEL_BASE := 0x82000000
 BOARD_KERNEL_PAGESIZE := 4096
 
@@ -100,6 +100,10 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \
+    surfaceflinger.te \
+    init.te \
+    shell.te \
+    netd.te \
 
 #twrp
 #DEVICE_RESOLUTION := 240x320
