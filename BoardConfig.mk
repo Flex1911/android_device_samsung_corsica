@@ -3,6 +3,9 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/samsung/corsica/BoardConfigVendor.mk
 
+# Legacy MMAP for pre-lollipop blobs
+BOARD_USES_LEGACY_MMAP := true
+
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := rhea
@@ -72,7 +75,7 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB -DEGL_NEEDS_FNW
 
 # Audio
-#COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB
+COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -104,6 +107,8 @@ BOARD_SEPOLICY_UNION += \
     init.te \
     shell.te \
     netd.te \
+    device.te \
+    rild.te \
 
 #twrp
 #DEVICE_RESOLUTION := 240x320
